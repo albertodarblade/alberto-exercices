@@ -1,0 +1,39 @@
+:root {
+  --primary: #655dd0;
+  --secondary: #f6a001;
+  --background: #fff;
+  --background-hue1: #f2f2f2;
+  --background-hue2: #ebebeb;
+  --text-accent: #fff;
+  --text: #333;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.App {
+  height: 100vh;
+  font-family: "Nunito", sans-serif;
+  color: var(--text);
+  background-color: var(--background-hue1);
+}
+
+.view {
+  margin: 0 auto;
+  width: 768px;
+}
+
+@media (max-width: 768px) {
+  .view {
+    max-width: auto;
+    width: 100%;
+  }
+}

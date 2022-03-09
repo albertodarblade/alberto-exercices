@@ -1,0 +1,9 @@
+.image {
+  height: 420px;
+  display: flex;
+  justify-content: center;
+}
+
+.image :global(img) {
+  border-radius: 16px;
+}

@@ -1,0 +1,7 @@
+.tagList {
+  display: flex;
+}
+
+.tagList > * + * {
+  margin-left: 12px;
+}

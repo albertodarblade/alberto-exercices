@@ -1,7 +1,15 @@
 import React from "react";
+import propTypes from "prop-types";
 import styles from "./styles.module.css";
 
-function ImageLayout({ title, imageUrl, updatedAt }) {
+/**
+ *
+ * @param {object} props Component props
+ * @param {string} props.title Component header title of the image
+ * @param {string} props.imageUrl img src to render a img tag
+ * @returns JSX component
+ */
+function ImageLayout({ title, imageUrl }) {
   return (
     <div>
       <div>
@@ -13,5 +21,10 @@ function ImageLayout({ title, imageUrl, updatedAt }) {
     </div>
   );
 }
+
+ImageLayout.propTypes = {
+  title: propTypes.string,
+  imageUrl: propTypes.string,
+};
 
 export default ImageLayout;

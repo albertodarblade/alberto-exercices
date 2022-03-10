@@ -40,15 +40,7 @@ export const imagePreviewSlice = createSlice({
       updatedAt: null,
     },
   },
-  reducers: {
-    addTag(state, action) {
-      const tagToDelete = action.payload;
-      const tagIndex = state.image.tags.findIndex(
-        (tag) => tag.id === tagToDelete.id
-      );
-      state.image.tags.splice(tagIndex, 1);
-    },
-  },
+  reducers: {},
   extraReducers: {
     [getImage.pending]: (state) => {
       state.imageStatus = "loading";

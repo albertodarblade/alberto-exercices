@@ -115,7 +115,12 @@
     "modulePaths": [],
     "moduleNameMapper": {
       "^react-native$": "react-native-web",
-      "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
+      "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy",
+      "@components(.*)$": "<rootDir>/src/components/$1",
+      "@api(.*)$": "<rootDir>/src/api/$1",
+      "@utils(.*)$": "<rootDir>/src/utils/$1",
+      "@views(.*)$": "<rootDir>/src/views/$1",
+      "@store(.*)$": "<rootDir>/src/store/$1"
     },
     "moduleFileExtensions": [
       "web.js",

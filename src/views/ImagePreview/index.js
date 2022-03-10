@@ -22,6 +22,10 @@ const selector = (state) => {
   };
 };
 
+/**
+ * View - Container for Image preview
+ * @returns JSX View
+ */
 function ImagePreview() {
   const { tags, image, tagListStatus, imageStatus, tagsStatus } =
     useSelector(selector);

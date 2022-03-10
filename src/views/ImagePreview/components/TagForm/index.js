@@ -1,9 +1,16 @@
 import React from "react";
+import propTypes from "prop-types";
 import Select from "@components/Select";
 import Button from "@components/Button";
 import noop from "@utils/noop";
 import styles from "./styles.module.css";
 
+/**
+ * Tag form component
+ * @param {object} props Components props
+ * @param {function} props.onAddTag Callback used once the user try to add a new tag
+ * @returns JSX component
+ */
 function TagForm({ tags, onAddTag }) {
   const [form, setForm] = React.useState({ tag: { value: "" } });
   function handleTagChange(event, tag) {
@@ -39,4 +46,13 @@ TagForm.defaultProps = {
   tags: [],
 };
 
+TagForm.propTypes = {
+  onAddTag: propTypes.func,
+  tags: propTypes.arrayOf(
+    propTypes.shape({
+      value: propTypes.string,
+      text: propTypes.string,
+    })
+  ),
+};
 export default TagForm;
